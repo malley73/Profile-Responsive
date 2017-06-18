@@ -1,5 +1,5 @@
 body {
-    width: 960px;
+    width: 100vw;
     margin: 0;
     padding: 0;
     background-image: url('../images/texturetastic_gray.png');
@@ -7,6 +7,12 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        width: 960px;
+    }
 }
 
 .content {
@@ -40,6 +46,10 @@ big {
     border-right: solid 2px #dddddd;
 }
 
+#contact {
+    margin-right: 20px;
+}
+
 .links {
     color: #777777;
     font-size: 18px;
@@ -54,6 +64,27 @@ big {
 .links:hover,
 .links:active {
     color: lightgreen;
+}
+
+@media screen and (max-width: 550px) {
+    #flex {
+        display: flex;
+    }
+    #flex > #About {
+        order: 1;
+    }
+    #flex > #portfolio {
+        order: 2;
+    }
+    #flex > #contact {
+        order: 3;
+    }
+    .links {
+        clear: both;
+        border: 0px;
+        padding: 0px;
+        
+    }
 }
 
 h1 {
@@ -76,6 +107,13 @@ h1 {
     border: solid 2px #dddddd;
     float: left;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+    #main {
+        width: 90vw;
+        margin-right: 20px;
+    }
 }
 
 
@@ -109,6 +147,15 @@ h1 {
     margin-top: 30px;
     color: #4aaaa5;
     border-top: solid 2px #dddddd;
+}
+
+@media screen and (max-width: 960px) {
+    #connect {
+        float: left;
+        margin-top: 0px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 h2 {
@@ -153,7 +200,7 @@ textarea {
     margin-right: 20px;
 }
 
-input[type=submit] {
+input[type="submit"] {
     color: white;
     background: #4aaaa5;
     width: 120px;
