@@ -67,23 +67,22 @@ big {
 }
 
 @media screen and (max-width: 550px) {
-    #flex {
-        display: flex;
-    }
-    #flex > #About {
-        order: 1;
-    }
-    #flex > #portfolio {
-        order: 2;
-    }
-    #flex > #contact {
-        order: 3;
-    }
     .links {
-        clear: both;
         border: 0px;
         padding: 0px;
-        
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .links {
+        float: left;
+        padding: 10px;
+        width: 50%;
+        margin: 0px;
+    }
+    #portfolio,
+    #About {
+        border-right: none;
     }
 }
 
@@ -107,13 +106,6 @@ h1 {
     border: solid 2px #dddddd;
     float: left;
     margin-bottom: 30px;
-}
-
-@media screen and (max-width: 700px) {
-    #main {
-        width: 90vw;
-        margin-right: 20px;
-    }
 }
 
 
@@ -194,7 +186,7 @@ h2 {
 input,
 textarea {
     padding: 5px;
-    width: 595px;
+    width: 95%;
     color: #777777;
     font-size: 14px;
     margin-right: 20px;
@@ -245,6 +237,17 @@ input[type="submit"]:hover {
 
 #sample5 {
     background-image: url('http://lorempixel.com/275/202/');
+}
+
+@media screen and (max-width: 700px) {
+    #main {
+        width: 90vw;
+        margin-right: 20px;
+    }
+    #sample2,
+    #sample4 {
+        float: left;
+    }
 }
 
 .samplelabels {
